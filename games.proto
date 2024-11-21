@@ -1,0 +1,20 @@
+syntax = "proto3";
+package grpc-games;
+option go_package = "github.com/ThomasLaPiana/grpc-examples";
+
+message Game {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string release_year = 4;
+  Genre genre = 5;
+}
+
+enum Genre {
+    ACTION = 0;
+    ADVENTURE = 1;
+    RPG = 2;
+    SHOOTER = 3;
+    SIMULATION = 4;
+    STRATEGY = 5;
+}
