@@ -1,5 +1,5 @@
 syntax = "proto3";
-package grpc-games;
+package grpcgames;
 option go_package = "github.com/ThomasLaPiana/grpc-examples";
 
 message Game {
