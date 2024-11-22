@@ -21,7 +21,9 @@ type server struct {
 
 func newServer() *server {
 	s := &server{
-		savedGames: []*pb.Game{},
+		savedGames: []*pb.Game{
+			{Name: "Zelda", Genre: pb.Genre_ADVENTURE},
+		},
 	}
 	return s
 }
