@@ -1,6 +1,6 @@
 syntax = "proto3";
 package grpcgames;
-option go_package = "github.com/ThomasLaPiana/grpc-examples";
+option go_package = "grpc-example/grpc-games";
 
 message Game {
   string id = 1;
@@ -17,4 +17,13 @@ enum Genre {
     SHOOTER = 3;
     SIMULATION = 4;
     STRATEGY = 5;
+}
+
+message GetGameRequest {
+  string name = 1;
+}
+
+service GameService {
+  rpc GetGame(GetGameRequest) returns (Game) {}
+  rpc CreateGame(Game) returns (Game) {}
 }
