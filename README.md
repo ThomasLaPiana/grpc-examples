@@ -4,18 +4,16 @@ Scratch Repo for Exploring gRPC/Protobuf
 
 The key features of Protobufs/gRPC:
 
-1. Use of `.proto` files to declare the messages (request/response objects)
-2. Automatically generated client and server code
-3. High-performance (compared to REST)
-4. Type information encoded as part of the message
+1. Use of `.proto` files to declare the messages (request/response objects) and services (endpoints)
+2. Automatically generated client and server code + interfaces
+3. High-performance (especially compared to REST)
+4. Type information encoded as part of the format
 
 [More info explaining REST vs gRPC and when to consider each](https://aws.amazon.com/compare/the-difference-between-grpc-and-rest/)
 
-## Generating gRPC from Protobuf definition file
+## Generating Client & Server Code
 
 The `games.proto` files is where all of the `Protobuf` and `gRPC` definitions live for this project.
-
-### Generating Client & Server Code
 
 As long as you have the general `protoc` compiler installed as well as the Go-specific compilers (protobuf as well as gRPC), you can run the following command to generate the code
 
